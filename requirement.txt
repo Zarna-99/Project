@@ -7,3 +7,9 @@ matplotlib
 mlxtend
 plotly==5.7.0
 us
+association_metrics
+streamlit_option_menu
+warnings
+pickle
+catboost
+base64
