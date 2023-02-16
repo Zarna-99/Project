@@ -202,7 +202,7 @@ if selected == 'EDA':
 
                 fig.update_layout(barmode='stack', height=600, width=900)
                 st.markdown(f"<h2 style='text-align: center;'>{selected_col}</h2>", unsafe_allow_html=True)
-                st.plotly_chart(fig)
+                st.plotly_chart(fig,use_container_width=True)
 
             #                                 ####   Funnel Chart   ####
             else:
@@ -239,7 +239,7 @@ if selected == 'EDA':
                 st.markdown(f"<h2 style='text-align: center;'>{selected_col} vs Target </h2>", unsafe_allow_html=True)
                 st.write("")
                 st.markdown("<h3 style='text-align: center;'>Funnel Chart</h3>", unsafe_allow_html=True)
-                st.plotly_chart(fig1)
+                st.plotly_chart(fig1,use_container_width=True)
                 st.write("")
                 st.write("")
 
@@ -257,7 +257,7 @@ if selected == 'EDA':
                 df7 = pd.melt(pivot_table, id_vars=selected_col, value_vars=['No', 'Yes'])
                 fig2 = px.treemap(df7, path=[selected_col, 'variable'], values='value')
                 fig2.update_layout(height = 600, width = 900)
-                st.plotly_chart(fig2)
+                st.plotly_chart(fig2,use_container_width=True)
 
 
 
@@ -296,7 +296,7 @@ if selected == 'EDA':
 
                 fig = px.scatter(df1, x=x_axis, y=Y_axis,
                                  color="churn",width=900,height=500)#hover_name="country", log_x=True,
-                st.plotly_chart(fig)
+                st.plotly_chart(fig,use_container_width=True)
 
             with tab2:
                 cl1, cl2, cl3, cl4 = st.columns([1, 1, 1, 1])
@@ -327,7 +327,7 @@ if selected == 'EDA':
                 fig4.update_geos(fitbounds="locations", visible=False)
                 fig4.update_layout(geo=dict(bgcolor= 'rgba(0,0,0,0)'),margin={"r":0,"t":100,"l":0,"b":0},paper_bgcolor='#0E1117',plot_bgcolor='#0E1117')
 
-                st.plotly_chart(fig4)
+                st.plotly_chart(fig4,use_container_width=True)
 
             with tab3:
                 df00 = df
@@ -376,7 +376,7 @@ if selected == 'EDA':
                                       )
 
                     # Show the plot
-                    st.plotly_chart(fig)
+                    st.plotly_chart(fig,use_container_width=True)
                 else:
                     st.warning('Please select at least one column to group by.')
 
