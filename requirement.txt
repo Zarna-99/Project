@@ -4,6 +4,7 @@ numpy
 sklearn
 seaborn
 matplotlib
+plotly.graph_objects
 mlxtend
 us
 association_metrics
