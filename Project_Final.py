@@ -144,7 +144,7 @@ if selected == 'EDA':
             matrix = df.corr()
             matrix = round(matrix,2)
             fig = px.imshow(matrix, width=800, height=800, text_auto=True,color_continuous_scale='Blues_r')
-            st.plotly_chart(fig)
+            st.plotly_chart(fig,use_container_width=True)
 
             st.markdown("<h3 style='text-align: center;'>Categorical Associations</h3>", unsafe_allow_html=True)
             cat = df[['area_code', 'voice_plan', 'intl_plan', 'churn', 'State_names']]
@@ -153,7 +153,7 @@ if selected == 'EDA':
             cramers_v = am.CramersV(dff)
             cfit = cramers_v.fit().round(2)
             fig1 = px.imshow(cfit, width=600, height=600, text_auto=True,color_continuous_scale='Blues_r')
-            st.plotly_chart(fig1)
+            st.plotly_chart(fig1,use_container_width=True)
 
         if Report == "Univariate":
             selected_col = st.sidebar.selectbox("Select Type",df.columns)
@@ -165,7 +165,7 @@ if selected == 'EDA':
                 fig.add_trace(go.Pie(labels=df[selected_col].value_counts().index, values=df[selected_col].value_counts()), row=1, col=2)
                 fig.update_layout(height = 600, width = 900, showlegend = False)
                 fig.update_xaxes(tickangle=-45)
-                st.plotly_chart(fig)
+                st.plotly_chart(fig,use_container_width=True)
 
 
             else:
@@ -178,7 +178,7 @@ if selected == 'EDA':
                 fig.append_trace(p2, row=1, col=2)
                 fig.update_layout(height=500, width=900, showlegend=False)
                 # fig.show()
-                st.plotly_chart(fig)
+                st.plotly_chart(fig,use_container_width=True)
 
         if Report == "Bivariate":
             
