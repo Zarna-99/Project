@@ -4,7 +4,7 @@ numpy
 sklearn
 seaborn
 matplotlib
-plotly
+Plotly
 mlxtend
 us
 association_metrics
