@@ -5,7 +5,7 @@ sklearn
 seaborn
 matplotlib
 mlxtend
-plotly==5.7.0
+plotly
 us
 association_metrics
 streamlit_option_menu
