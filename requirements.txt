@@ -6,4 +6,4 @@ plotly
 us
 association_metrics
 streamlit_option_menu
-catboost
+lightgbm
