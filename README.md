@@ -2,3 +2,6 @@ Customer churn is a major concern for organizations, as losing existing customer
 
 
 This GitHub repository utilizes a dataset containing customer information from a telecommunications company. This notebook is dedicated to performing exploratory data analysis and building models based on seven different algorithms. Once the models are created, they are evaluated based on their respective metrics, with the best model ultimately being selected. After analyzing the dataset, the Light Gradient Boosting algorithm was found to provide the best results, which is why the final model was built using this particular algorithm.
+
+
+The final step involved deploying the model using Streamlit, which focuses on two key aspects: the Exploratory Data Analysis (EDA) of the dataset and generating predictions. The EDA provides a comprehensive analysis under four categories: Descriptive Statistics, Univariate Analysis, Bivariate Analysis, and Multivariate Analysis. For the prediction task, the user has two options. The first option enables the user to input a single value for each feature, and based on this input, the model predicts whether the customer will churn or not. The second option allows the user to input multiple values for each feature in the form of a dataset, and the model will generate churn predictions for each customer in the dataset.
