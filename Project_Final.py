@@ -405,7 +405,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn import preprocessing , linear_model
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import OneHotEncoder
-ohe=OneHotEncoder(handle_unknown="ignore", sparse=False)
+ohe=OneHotEncoder(handle_unknown="ignore", sparse_output=False)
 import base64
 
 ##############################################
